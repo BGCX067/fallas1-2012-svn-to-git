@@ -1,0 +1,129 @@
+package drools;
+
+import drools.MotroInferenciaDrools.Message;
+ 
+rule "REGLA 1"
+	when
+		m : Message( resp1 ==  0 
+		&& resp2 == 2 
+		&& resp3 >= 1 && resp3 <=5 
+		&& (resp4 == 0  || resp4 ==1) 
+		&& resp11 == 1 
+		&& resp12 == 1 , myMessage : message )
+	then
+		m.setMessage("RIESGO ALTO");
+end
+
+
+rule "REGLA 2"
+	when
+		m : Message( resp1 ==  0 
+		&& (resp2 == 1 || resp2 ==0 ) 
+		&& resp3 >= 6 && resp3 <=9 
+		&& resp5 == 1 
+		&& resp11 == 1 , myMessage : message )
+	then
+		m.setMessage("RIESGO ALTO");
+end
+
+rule "REGLA 3"
+	when
+		m : Message( resp1 ==  0 
+		&& (resp2 == 1 || resp2 ==0 ) 
+		&& resp5 == 0 
+		&& resp6 >=4 
+		&& resp7 == 1
+		&& resp11 == 1 , myMessage : message )
+	then
+		m.setMessage("RIESGO ALTO");
+end
+
+rule "REGLA 4"
+	when
+		m : Message( resp1 ==  0 
+		&& (resp2 == 1 || resp2 ==0 ) 
+		&& resp5 == 0 
+		&& (resp13 == 0  || resp13==2)
+		&& (resp14 >= 100000)	
+		&& resp15 == 0
+		&& resp16 == 1
+		&& (resp17 == 0 || resp17==1)
+		&& resp9 > 60
+		&& resp10 == 0 , myMessage : message )
+	then
+		m.setMessage("RIESGO ALTO");
+end
+
+rule "REGLA 5"
+	when
+		m : Message( resp1 ==  0 
+		&& resp2==0
+		&& resp3 >=10 && resp3 <=12
+		&& resp5 == 0
+		&& resp6 >=4
+		&& resp7 == 0
+		&& ( resp8 == 0 || resp8 == 1) 
+		&& resp9 > 30
+		&& resp11 == 1
+		&& resp12 == 0
+		&& (resp13 == 0  || resp13==2)
+		&& resp14 >= 30000
+		&& resp15 == 1
+		&& resp16 == 1
+		&& (resp17 == 0 || resp17==1), myMessage : message )
+	then
+		m.setMessage("RIESGO MEDIO");
+end
+
+rule "REGLA 6"
+	when
+		m : Message( resp1 ==  1 
+		&& resp2==1
+		&& resp3 >=13 && resp3 <=15
+		&& (resp4 == 0  || resp4 ==1)
+		&& resp5 == 0
+		&& resp6 >=4 
+		&& resp7 == 0
+		&& resp14 >= 100000
+		&& resp15 == 1
+		&& resp8 == 2
+		&& resp10 == 0 
+		&& resp11 == 0
+		&& resp12 == 1, myMessage : message )
+	then
+		m.setMessage("RIESGO MEDIO");
+end
+
+rule "REGLA 7"
+	when
+		m : Message( resp1 ==  1 
+		&& resp2==1
+		&& resp3 >=16 && resp3 <=19
+		&& (resp4 == 0  || resp4 ==1)
+		&& resp5 == 0
+		&& resp6 <= 3
+		&& resp7 == 0
+		&& resp15 == 1
+		&& resp10 == 2
+		&& resp11 == 1
+		&& resp12 == 0, myMessage : message )
+	then
+		m.setMessage("RIESGO BAJO");
+end
+
+rule "REGLA 8"
+	when
+		m : Message( resp1 ==  1 
+		&& resp2==0
+		&& resp4 == 2 
+		&& resp5 == 0
+		&& resp6 >= 3
+		&& resp7 == 0
+		&& resp9 >=30
+		&& resp11 == 0
+		&& resp12 == 0, myMessage : message )
+	then
+		m.setMessage("RIESGO BAJO");
+end
+
+

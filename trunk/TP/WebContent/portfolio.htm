@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<script>
+function Abrir_ventana (pagina) {
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=365, top=85, left=140";
+window.open(pagina,"",opciones);
+}
+
+function ocultarPreguntasDesde(index){
+	  var it;
+	  for (it=index;it<=8;it=it+1) {
+		  oculta('pregunta' + it);	
+		  var resp1 = document.getElementsByName('respuesta_'+it)[0];	  
+		  var resp2 = document.getElementsByName('respuesta_'+it)[1];
+		  resp1.checked=false;	  
+		  resp2.checked=false;	  
+	
+	  }
+}
+function ocultarEnfermedades(index,end){
+	  var it;
+	  for (it=index;it<=end;it=it+1) {
+		 oculta('e' + it);	
+	  }
+}
+function mostararEnfermedades(index,end){
+	  var it;
+	  for (it=index;it<=end;it=it+1) {
+		 muestra('e' + it);	
+	  }
+}
+function muestra(id){
+	var el = document.getElementById(id);
+	el.style.display = 'block'; 
+}
+function oculta(id){
+	var el = document.getElementById(id);
+	el.style.display = 'none'; 
+}
+
+<!-- Pregunta 1-->
+function ocultarYes1(){
+	mostararEnfermedades(2,3);
+	muestra('pregunta3') ;
+	ocultarPreguntasDesde(4);
+	<!-- ocultarEnfermedades(3,7); -->
+	ocultarEnfermedades(1,1);
+
+}
+function ocultarNo1(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta2') ;
+	ocultarPreguntasDesde(3);
+	<!-- muestra('pregunta3'); -->
+	<!-- oculta('pregunta2');  -->
+	<!-- ocultarPreguntasDesde(4); -->
+	ocultarEnfermedades(1,1);
+}
+
+<!-- Pregunta 2: Llego por si en Pregunta 1, solamente dar la posibilidad de diagnosticar-->
+function ocultarYes2(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta3') ;
+	ocultarPreguntasDesde(4);
+	<!-- ocultarEnfermedades(3,7); -->
+	ocultarEnfermedades(1,1);
+
+}
+function ocultarNo2(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta3') ;
+	ocultarPreguntasDesde(4);
+	<!-- muestra('pregunta3'); -->
+	<!-- oculta('pregunta2');  -->
+	<!-- ocultarPreguntasDesde(4); -->
+	ocultarEnfermedades(1,1);
+}
+<!-- Pregunta 3-->
+function ocultarYes3(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta4') ;
+	ocultarPreguntasDesde(5);
+	ocultarEnfermedades(1,1);
+}
+
+function ocultarNo3(){
+	mostararEnfermedades(1,3);
+	ocultarPreguntasDesde(4);
+	ocultarEnfermedades(1,1);
+}
+
+<!--Pregunta 4-->
+function ocultarYes4(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta5') ;
+	ocultarPreguntasDesde(6);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+}
+
+function ocultarNo4(){
+	mostararEnfermedades(1,3);
+	ocultarPreguntasDesde(5);
+	ocultarEnfermedades(1,1);
+}
+
+<!--Pregunta 5-->
+function ocultarYes5(){
+	mostararEnfermedades(1,3);
+	ocultarPreguntasDesde(6);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+
+}
+function ocultarNo5(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta6') ;
+	ocultarPreguntasDesde(7);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+}
+
+<!--Pregunta 6-->
+function ocultarYes6(){
+	mostararEnfermedades(1,3);
+	ocultarPreguntasDesde(7);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+
+}
+function ocultarNo6(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta7') ;
+	ocultarPreguntasDesde(8);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+}
+
+
+<!--Pregunta 7-->
+function ocultarYes7(){
+	mostararEnfermedades(1,3);
+	ocultarPreguntasDesde(8);
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+
+}
+function ocultarNo7(){
+	mostararEnfermedades(1,3);
+	muestra('pregunta8') ;
+	ocultarEnfermedades(1,1);
+	ocultarEnfermedades(1,1);
+}
+</script>
+
+<head>
+	<title>Diagnostico</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" /><![endif]-->
+
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css" /><![endif]-->
+</head>
+
+<body>
+<div id="titleheader_bg">
+<a class="logo" href="index.html" title="Home"></a>
+</div>
+
+<div id="navigation">
+		<ul>
+			<li><a href="index.html" title="Home">Home</a></li>
+			<li><a href="aboutus.htm" title="Nostros">Acerca de Nosotros</a></li>
+			<li><a href="portfolio.htm" title="Diagnostico">Inicio de Diagnostico</a></li>
+			<li><a href="services.htm" title="Estadisticas">Estadisticas</a></li>
+			<li><a href="contact.htm" title="Contacto">Contactenos</a></li>
+		</ul>
+		<div class="search">
+			<form name="search" method="post" action="">
+				<input id="s" type="text" name="search" />
+				<input type="submit" id="search_btn" value="Search"/>
+			</form>
+		</div>
+	</div>
+
+<div id="container">
+	<div id="content_container">
+
+		<div id="content" style="width:965px;">
+			<h1>Cuestionario</h1>
+			<hr />
+				<div class="folioGallery">
+				<form action="RespuestasAction">
+					<div class="image_holder">
+						<div id="pregunta1">
+							<span>
+								<br></br>¿El cliente es un <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=0')">cliente habitual</a> del banco?
+							</span>
+							<div >
+								<br></br><input type="radio" name="respuesta_1" value="1" onclick="javascript:ocultarYes1();"/>	SI
+								&nbsp;	<input type="radio" name="respuesta_1" value="0" onClick="javascript:ocultarNo1();"/>	NO 
+							</div>					
+						</div>
+						<div id="pregunta2" style="display:none;">
+							<span>
+								<br></br>¿De qué <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=1')">tipo de persona</a> se trata?
+							</span>
+							<div>
+								<br></br><input type="radio" name="respuesta_2" value="2" onClick="javascript:ocultarNo2();"/>	ONG &nbsp;<br>
+										 <input type="radio" name="respuesta_2" value="1" onClick="javascript:ocultarNo2();"/>	Persona Jurídica &nbsp;<br>
+										 <input type="radio" name="respuesta_2" value="0" onClick="javascript:ocultarNo2();"/>	Persona Física
+							</div>
+						</div>
+						<div id="pregunta3" style="display:none;">
+							<span>
+								<br></br>¿Cuál es la  <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=2')">actividad</a> del cliente?
+							</span>
+							<div>
+								<br></br><input type="number" name="respuesta_3" min="0" onkeydown="javascript:ocultarYes3();"/>&nbsp;	
+							</div>
+						</div>
+						<div id="pregunta4" style="display:none;">
+							<span>
+								<br></br>Los <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=3')">ingresos</a> del cliente son:
+							</span>
+							<div >
+								<br></br><input type="radio" name="respuesta_4" value="2" onClick="javascript:ocultarYes4();"/>	Menores a 100000 pesos&nbsp;<br>
+									     <input type="radio" name="respuesta_4" value="1" onClick="javascript:ocultarYes4();"/>	Entre 100000 y 300000 pesos&nbsp;<br>
+									     <input type="radio" name="respuesta_4" value="0" onClick="javascript:ocultarYes4();"/>	Mayores a 300000 pesos
+							</div>
+						</div>
+						<div id="pregunta5" style="display:none;">
+							<span>
+								<br></br>¿Se trata de una <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=8')">persona políticamente expuesta</a>?
+							</span>
+							<div>
+								<br></br><input type="radio" name="respuesta_5" value="1" onClick="javascript:ocultarNo5();"/>	SI&nbsp;	
+										<input type="radio" name="respuesta_5" value="0" onClick="javascript:ocultarNo5();"/>	NO
+							</div>
+						</div>
+						<div id="pregunta6" style="display:none;">
+							<span>
+								<br></br>La <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=10')">calificación Veraz</a> es:
+							</span>
+							<div>
+								<br></br><input type="radio" name="respuesta_6" value="4" onClick="javascript:ocultarNo6();"/>	1&nbsp;	
+										 <input type="radio" name="respuesta_6" value="3" onClick="javascript:ocultarNo6();"/>	2&nbsp;
+										 <input type="radio" name="respuesta_6" value="2" onClick="javascript:ocultarNo6();"/>	3&nbsp;
+										 <input type="radio" name="respuesta_6" value="1" onClick="javascript:ocultarNo6();"/>	4&nbsp;
+										 <input type="radio" name="respuesta_6" value="0" onClick="javascript:ocultarNo6();"/>	5&nbsp;
+							</div>
+						</div>
+						<div id="pregunta7" style="display:none;">
+							<span>
+								<br></br>¿El cliente presenta <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=9')">antecedentes judiciales</a>?
+							</span>
+							<div>
+								<br></br><input type="radio" name="respuesta_7" value="1" onClick="javascript:ocultarYes7();"/>SI&nbsp;	
+								         <input type="radio" name="respuesta_7" value="0" onClick="javascript:ocultarNo7();"/>NO
+							</div>
+						</div>
+						<div id="pregunta8" style="display:none;">
+							<span>
+								<br></br>El <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=6')"> movimiento</a> es:
+							</span>
+							<div>
+								<br></br><input type="radio" name="respuesta_8" value="1"/>&nbsp;	Depósito o transferencia de cuentas	
+										 <input type="radio" name="respuesta_8" value="0"/> Otro
+							</div>
+						</div>
+					</div>
+				<div class="discription">
+					<h3>Clasificación según riesgo de <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=4')">Lavado de Dinero</a></h3>
+					<ul class="details">
+					<div id="e1"><li>Riesgo Alto</li></div>
+					<div id="e2"><li>Riesgo Medio</li></div>
+					<div id="e3"><li>Riesgo Bajo</li></div>
+					<!--   <div id="e4"><li>Demencia debido a una enfermedad médica </li></div> 
+					<div id="e5"><li>Demencia Tipo Alzehimer </li></div>
+					<div id="e6"><li>Demencia No Específicada</li></div>
+					<div id="e7"><li>Trastorno amnésico debido a una enfermedad médica</li></div>-->
+					</ul>
+					<p>Posibles Diagnosticos segun la respuestas elegidas</p>
+				</div>
+				<div><button type="submit" name="submit" value="Submit">Diagnosticar</button></div>
+			</form>
+			</div>
+			
+		</div>
+        
+		</div>
+		<div class="spacer"></div>
+	
+</div>
+
+<div id="footer">
+	&copy; Copyright 2012 Fallas 1 - FIUBA &amp; Lavado de Dinero.  All Rights Reserved.
+</div>
+</body>
+
+</html>

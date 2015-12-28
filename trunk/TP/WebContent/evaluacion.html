@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema para la detecci&oacuten de lavado de dinero</title>
+<link href="styles/ibstyles.css" rel="stylesheet" type="text/css" />
+
+<link href="images/logo.gif" rel="shortcut icon" />
+<script type="text/javascript" src="scripts/vwd_curvycorners.js"></script>
+<script type="text/javascript" src="scripts/capply.js"></script>
+<script>
+function Abrir_ventana (pagina) {
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, width=508, height=300, top=85, left=140";
+window.open(pagina,"",opciones);
+}
+</script>
+
+<!--[if lt IE 7]>
+<style type="text/css">
+.px_fix{
+	left:1px;
+	bottom:-3px;
+}
+</style>
+<![endif]-->
+</head>
+<body>
+	<div id="main_cnr">
+		<div id="in_cnr" class="services">
+			<div id="header_cnr">
+				<div id="navigation_cnr" class="cbox">
+					<img src="images/px_fix.gif" class="px_fix" />
+					<ul>
+						<li><a href="index.html" >Inicio</a></li>
+          <li><a href="conceptos.html">Conceptualización</a></li>
+          <li><a href="evaluacion.html" class="active">Evaluación de riesgo</a></li>
+          <li><a href="tp.html">Trabajo Práctico</a></li>
+					</ul>
+					<img src="images/logo.gif" id="logo" />
+				</div>
+				<!--navigation_cnr-->
+			</div>
+			<!--header_cnr-->
+			<div id="body_cnr">
+				<div id="banner_cnr" class="cbox">
+					<h1>Cuestionario</h1>
+				
+				<!--banner_cnr-->
+				<div id="srv_cnr">
+					<div id="srv_lft">
+						<div id="c_form">
+							<form action="RespuestasAction">
+
+<br><br><br>
+								<h3>Cliente</h3>
+
+
+								<div class="field">
+
+									<br></br>1- ¿El cliente es un <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=0')">cliente
+										habitual</a> del banco? <br></br> <input type="radio"
+										name="respuesta_1" value="1"
+										onClick="javascript:ocultarYes1();" /> SI &nbsp; <input
+										type="radio" name="respuesta_1" value="0"
+										onClick="javascript:ocultarNo1();" /> NO
+								</div>
+
+
+								<div class="field">
+
+									<br></br>2- ¿De qué <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=1')">tipo
+										de persona</a> se trata? <br></br> <input type="radio"
+										name="respuesta_2" value="2"
+										onClick="javascript:ocultarNo2();" /> ONG &nbsp;<br> <input
+										type="radio" name="respuesta_2" value="1"
+										onClick="javascript:ocultarNo2();" /> Persona Jurídica &nbsp;<br>
+											<input type="radio" name="respuesta_2" value="0"
+											onClick="javascript:ocultarNo2();" /> Persona Física 
+								</div>
+
+
+								<div class="field">
+
+									<br></br>3- ¿Cuál es la <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=2')">actividad</a>
+									del cliente? <br></br>
+									<input type="number" value="0" name="respuesta_3" min="0"
+										onkeydown="javascript:ocultarYes3();" />&nbsp;
+								</div>
+
+
+
+								<div class="field">
+
+									<br></br>4- Los <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=3')">ingresos</a>
+									del cliente son: <br></br>
+									<input type="radio" name="respuesta_4" value="2"
+										onClick="javascript:ocultarYes4();" /> Menores a 100000
+									pesos&nbsp;<br></br> <input type="radio" name="respuesta_4"
+										value="1" onClick="javascript:ocultarYes4();" /> Entre 100000
+									y 300000 pesos&nbsp;<br></br> <input type="radio"
+										name="respuesta_4" value="0"
+										onClick="javascript:ocultarYes4();" /> Mayores a 300000 pesos
+								</div>
+
+
+								<div class="field">
+
+									<br></br>5- ¿Se trata de una <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=13')">persona
+										políticamente expuesta</a>? <br></br>
+									<input type="radio" name="respuesta_5" value="1"
+										onClick="javascript:ocultarNo5();" /> SI&nbsp; <input
+										type="radio" name="respuesta_5" value="0"
+										onClick="javascript:ocultarNo5();" /> NO
+								</div>
+
+
+
+
+
+								<div class="field">
+
+									<br></br>6- La <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=10')">Calificación
+										Veraz</a> es: <br></br> <input type="radio" name="respuesta_6"
+										value="1" onClick="javascript:ocultarNo6();" /> 1&nbsp; <input
+										type="radio" name="respuesta_6" value="2"
+										onClick="javascript:ocultarNo6();" /> 2&nbsp; <input
+										type="radio" name="respuesta_6" value="3"
+										onClick="javascript:ocultarNo6();" /> 3&nbsp; <input
+										type="radio" name="respuesta_6" value="4"
+										onClick="javascript:ocultarNo6();" /> 4&nbsp; <input
+										type="radio" name="respuesta_6" value="5"
+										onClick="javascript:ocultarNo6();" /> 5&nbsp;
+								</div>
+
+
+
+
+
+
+
+
+								<div class="field">
+
+									<br></br>7- ¿El cliente presenta <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=9')">antecedentes
+										judiciales</a>? <br></br>
+									<input type="radio" name="respuesta_7" value="1"
+										onClick="javascript:ocultarYes7();" />SI&nbsp; <input
+										type="radio" name="respuesta_7" value="0"
+										onClick="javascript:ocultarNo7();" />NO
+								</div>
+
+
+
+
+
+
+								<h3>Cuenta</h3>
+
+
+								<div class="field">
+
+									<br></br>8- El <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=11')">tipo
+										de cuenta</a> es: <br></br> <input type="radio" name="respuesta_8"
+										value="2" onClick="javascript:ocultarNo2();" /> Caja de
+									ahorro &nbsp;<br> <input type="radio" name="respuesta_8"
+										value="1" onClick="javascript:ocultarNo2();" /> Cuenta
+										corriente &nbsp;<br> <input type="radio"
+											name="respuesta_8" value="0"
+											onClick="javascript:ocultarNo2();" /> Plazo fijo 
+								</div>
+
+
+
+
+
+								<div class="field">
+
+									<br></br>9- ¿Durante cuánto tiempo permaneció <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=12')">inactiva</a>
+									la cuenta? <br></br>
+									<input type="number" value="0" name="respuesta_9" min="0"
+										onkeydown="javascript:ocultarYes3();" />&nbsp;
+								</div>
+
+
+
+								<div class="field">
+
+									<br></br>10- ¿Qué relación existe entre los titulares de la cuenta?: <br></br>
+									<input type="radio" name="respuesta_10" value="2"
+										onClick="javascript:ocultarYes4();" /> Socios &nbsp;<br></br>
+									<input type="radio" name="respuesta_10" value="1"
+										onClick="javascript:ocultarYes4();" /> Familiares &nbsp;<br></br>
+									<input type="radio" name="respuesta_10" value="0"
+										onClick="javascript:ocultarYes4();" /> Ninguna
+								</div>
+
+								<div class="field">
+
+									<br></br>11- ¿Supera el límite de <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=6')">movimientos</a>
+									?: <br></br>
+									<input type="radio"
+										name="respuesta_11" value="1"
+										onClick="javascript:ocultarYes1();" /> SI &nbsp; <input
+										type="radio" name="respuesta_11" value="0"
+										onClick="javascript:ocultarNo1();" /> NO
+								</div>
+
+
+								<div class="field">
+
+									<br></br>12- ¿Más de 5 transacciones superan un total de $ 40000 ?: <br></br>
+					<input type="radio"
+										name="respuesta_12" value="1"
+										onClick="javascript:ocultarYes1();" /> SI &nbsp; <input
+										type="radio" name="respuesta_12" value="0"
+										onClick="javascript:ocultarNo1();" /> NO
+								</div>
+
+
+
+
+
+
+
+
+
+								<h3>Movimiento</h3>
+
+
+								<div class="field">
+
+									<br></br>13- El tipo de <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=2')">movimiento</a> es: <br></br> <input type="radio"
+										name="respuesta_13" value="6"
+										onClick="javascript:ocultarNo2();" /> Depósito &nbsp;<br>
+										<input type="radio" name="respuesta_13" value="5"
+										onClick="javascript:ocultarNo2();" /> Extracción &nbsp;<br>
+											<input type="radio" name="respuesta_13" value="4"
+											onClick="javascript:ocultarNo2();" /> Transferencia entre
+											cuentas &nbsp;<br> <input type="radio"
+												name="respuesta_13" value="3"
+												onClick="javascript:ocultarNo2();" /> Pago de intereses
+												&nbsp;<br> <input type="radio" name="respuesta_13"
+													value="2" onClick="javascript:ocultarNo2();" /> Impuestos
+													&nbsp;<br> <input type="radio" name="respuesta_13"
+														value="1" onClick="javascript:ocultarNo2();" /> Débitos
+														por comisiones &nbsp;<br> <input type="radio"
+															name="respuesta_13" value="0"
+															onClick="javascript:ocultarNo2();" /> Débito automático
+															&nbsp;<br>
+								</div>
+
+
+
+								<div class="field">
+
+									<br></br>14- ¿Cuál es el <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=14')">importe</a>?
+									<br></br>
+									<input type="number" value="0" name="respuesta_14" min="0"
+										onkeydown="javascript:ocultarYes3();" />&nbsp;
+								</div>
+
+
+
+
+								<div class="field">
+
+									<br></br>15- ¿Presentó la documentación requerida para justificar
+									el <a href="javascript:Abrir_ventana('popup_1.jsp?nroDef=6')">movimiento</a>?
+									<br></br>
+									<input type="radio" name="respuesta_15" value="1"
+										onClick="javascript:ocultarYes7();" />SI&nbsp; <input
+										type="radio" name="respuesta_15" value="0"
+										onClick="javascript:ocultarNo7();" />NO
+								</div>
+
+
+								<div class="field">
+
+									<br></br>16- ¿El movimiento  <a	href="javascript:Abrir_ventana('popup_1.jsp?nroDef=6')">movimiento</a>
+									fue realizado desde el exterior?
+									<br></br>
+									<input type="radio" name="respuesta_16" value="1"
+										onClick="javascript:ocultarYes7();" />SI&nbsp; <input
+										type="radio" name="respuesta_16" value="0"
+										onClick="javascript:ocultarNo7();" />NO
+								</div>
+
+
+								<div class="field">
+
+									<br></br>17- ¿En qué <a
+										href="javascript:Abrir_ventana('popup_1.jsp?nroDef=15')">moneda</a>
+									fue realizado el movimiento?<br></br> <input type="radio"
+										name="respuesta_17" value="2"
+										onClick="javascript:ocultarNo5();" /> Euros <br></br>
+									<input type="radio" name="respuesta_17" value="1"
+										onClick="javascript:ocultarNo5();" /> Dólares &nbsp; <br></br>
+									<input type="radio" name="respuesta_17" value="0"
+										onClick="javascript:ocultarNo5();" /> Pesos&nbsp;
+								</div>
+
+
+
+
+
+								<br></br>
+
+
+
+
+
+
+
+
+								<div>
+									<button type="submit" name="submit" value="Submit">Evaluar
+										riesgo</button>
+								</div>
+								
+								    <br>
+								    <div class="field">
+								    <br>
+								    <br><br><br>
+								    </div>
+   
+							</form>
+						</div></div>
+						
+						 <!--body_cnr-->
+ 
+
+    
+    <div id="footer_cnr" class="cbox">
+      <div class="fl"> 16/07/2012 FIUBA </div>
+      <!--.fl-->
+      <div class="fr">75.67 Sistemas aut. de diag. y detección de fallas I</div>
+      <!--.fr-->
+    </div>
+    <!--footer_cnr-->
+  </div>
+  <!--in_cnr-->
+</div>
+<!--main_cnr-->
+</body>
+</html>
